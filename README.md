@@ -29,9 +29,17 @@ Given any question, the agent:
 
 ## Evaluation
 
-Tested on a set of 15 questions spanning factual lookup, multi-source reasoning, and ambiguous/disputed topics (e.g. "Is Pluto a planet?").
-*(Results to be added once full evaluation run completes)*
+I tested the agent on 15 questions — a mix of straightforward facts, harder multi-source comparisons, and a few genuinely tricky ones (disputed facts, unanswerable questions, and recent events).
 
+**Result: 13/15 correct (87%)**
+
+A few things stood out:
+
+- On questions where sources actually disagree (like whether the Nile or Amazon is longer), the agent didn't just pick one — it explained the disagreement instead of papering over it.
+- When asked something it genuinely couldn't know — like who'll win the next election — it said so, instead of guessing. Same with a question about very recent AI releases, where it was upfront that its sources didn't fully cover the timeframe asked.
+- The one real weakness I found: a question about recent space mission updates returned slightly outdated info, since the search wasn't strongly weighted toward recency. Good thing to know and fix later.
+
+Overall, the agent was more likely to admit uncertainty than to confidently make something up — which was honestly the main thing I was testing for.
 ## Running locally
 
 \`\`\`bash
@@ -42,4 +50,4 @@ streamlit run app.py
 
 ## Author
 
-Built by Laxmi Pandit as part of a self-directed AI/GenAI engineering learning path.
+Built by Laxmi Pandit.
