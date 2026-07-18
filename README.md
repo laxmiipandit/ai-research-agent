@@ -40,14 +40,15 @@ A few things stood out:
 - The one real weakness I found: a question about recent space mission updates returned slightly outdated info, since the search wasn't strongly weighted toward recency. Good thing to know and fix later.
 
 Overall, the agent was more likely to admit uncertainty than to confidently make something up — which was honestly the main thing I was testing for.
+
 ## Running locally
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-# Add your GROQ_API_KEY and TAVILY_API_KEY to a .env file
 streamlit run app.py
-\`\`\`
+```
 
+Before running, add your `GROQ_API_KEY` and `TAVILY_API_KEY` to a `.env` file in the project root.
 ## Author
 
 Built by Laxmi Pandit.
